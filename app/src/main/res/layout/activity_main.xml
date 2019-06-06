@@ -38,10 +38,10 @@
         android:layout_below="@id/layout"></ListView>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnFindRecipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Button" />
+        android:text="레시피 찾기" />
 </RelativeLayout>
