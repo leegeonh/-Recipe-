@@ -1,9 +1,10 @@
 package com.example.cknck.recipe;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
 import java.util.Vector;
 
 public class VideoActivity extends AppCompatActivity {
