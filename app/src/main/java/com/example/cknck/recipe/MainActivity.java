@@ -1,5 +1,6 @@
 package com.example.cknck.recipe;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,12 +12,13 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     ListView listView;
     ArrayList<String> list = new ArrayList<String>();
     Button btnAdd;
     Button btnDel;
+    Button btnFindRecipe;
     ArrayAdapter<String> adapter;
 
     @Override
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         listView =(ListView)findViewById(R.id.listView1);
         btnAdd = (Button)findViewById(R.id.btnAdd);
         btnDel = (Button)findViewById(R.id.btnDel);
+        btnFindRecipe = (Button)findViewById(R.id.btnFindRecipe);
 
         adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_single_choice,list);
 
@@ -62,5 +65,22 @@ public class MainActivity extends AppCompatActivity {
                 listView.clearChoices();
             }
         });
+
+        btnFindRecipe.setOnClickListener(this);
+    }
+
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btnFindRecipe :
+                //Recommand Activity 를 위한 새로운 Intent를 선언한다
+                Intent intent = new Intent(this, RecommandActivity.class);
+
+                //Recommand Activity를 실행한다
+                this.startActivity(intent);
+                break;
+
+        }
     }
 }
