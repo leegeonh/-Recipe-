@@ -6,7 +6,8 @@
     android:paddingRight="10dp"
     android:paddingTop="5dp"
     android:paddingBottom="5dp"
-    android:background="#ffffff">
+    android:background="#ffffff"
+    android:descendantFocusability="blocksDescendants">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -19,6 +20,7 @@
         android:paddingBottom="5dp">
 
         <ImageView
+            android:id="@+id/foodImg"
             android:layout_width="120dp"
             android:layout_height="120dp" />
     </LinearLayout>
@@ -60,14 +62,16 @@
                 android:id="@+id/btnVideo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="레시피 영상 보기"/>
+                android:text="부족한 재료 보기"
+                />
 
             <Button
                 android:id="@+id/btnLike"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:text="♡"/>
+                android:text="♡"
+                />
         </LinearLayout>
 
     </LinearLayout>
