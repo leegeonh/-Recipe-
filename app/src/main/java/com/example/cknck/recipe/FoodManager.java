@@ -12,6 +12,8 @@ public class FoodManager {
 
     public FoodManager() {
 
+        foods = new ArrayList<Food>();
+
         ArrayList<Ingredient> ingredients01 = new ArrayList<Ingredient>();;
         ingredients01.add(new Ingredient("스팸",100f));
         ingredients01.add(new Ingredient("달걀",1));

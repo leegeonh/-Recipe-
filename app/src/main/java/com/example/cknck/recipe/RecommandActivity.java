@@ -1,13 +1,12 @@
 package com.example.cknck.recipe;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class RecommandActivity extends AppCompatActivity implements View.OnClickListener {
@@ -15,6 +14,7 @@ public class RecommandActivity extends AppCompatActivity implements View.OnClick
     private ListView listView;
     private FoodListAdapter adapter;
     private List<Food> foodList;
+    private FoodManager foodManager;
 
 
     @Override
@@ -24,6 +24,10 @@ public class RecommandActivity extends AppCompatActivity implements View.OnClick
         Intent intent = getIntent();
 
         listView = (ListView) findViewById(R.id.listView);
+        foodManager = new FoodManager();
+        System.out.println(foodManager.foods);
+        foodList = foodManager.foods;
+        /*
         foodList = new ArrayList<Food>();
 
         //음식 객체는 이런식으로 만들면 됩니다. 관리하기 편하게 소스 페이지를 새로 만드는 게 좋을 수도 있겠네요
@@ -48,7 +52,7 @@ public class RecommandActivity extends AppCompatActivity implements View.OnClick
         foodList.add(food01);
         foodList.add(food02);
         foodList.add(food03);
-
+*/
         adapter = new FoodListAdapter(getApplicationContext(), foodList);
         listView.setAdapter(adapter);
 
@@ -66,6 +70,6 @@ public class RecommandActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
-
+        
     }
 }
