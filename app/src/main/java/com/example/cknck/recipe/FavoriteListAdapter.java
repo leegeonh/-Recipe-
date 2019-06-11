@@ -58,7 +58,7 @@ public class FavoriteListAdapter extends BaseAdapter implements View.OnClickList
             public void onClick(View v) {
                 foodList.get(i).setFavorite(false);
                 foodList.remove(i);
-               // this.notifyDataSetChanged();
+                notifyDataSetChanged();
             }
         });
 

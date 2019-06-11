@@ -8,6 +8,15 @@
     android:background="#d1d1d1"
     tools:context=".FavoritesActivity">
 
+    <TextView
+        android:id="@+id/noFavoriteAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="좋아요한 레시피가 없습니다."
+        android:textColor="#000000"
+        android:textSize="16dp" />
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

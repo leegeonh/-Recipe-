@@ -27,19 +27,19 @@ public class RecommandActivity extends AppCompatActivity implements View.OnClick
         foodList = new ArrayList<Food>();
 
         //음식 객체는 이런식으로 만들면 됩니다. 관리하기 편하게 소스 페이지를 새로 만드는 게 좋을 수도 있겠네요
-        Ingredient[] ingredients01 = new Ingredient[10];
-        ingredients01[0] = new Ingredient("스팸",100f);
-        ingredients01[1] = new Ingredient("달걀",1);
+        ArrayList<Ingredient> ingredients01 = new ArrayList<Ingredient>();;
+        ingredients01.add(new Ingredient("스팸",100f));
+        ingredients01.add(new Ingredient("달걀",1));
         Food food01  = new Food("스팸덮밥", ingredients01, "v1M6bVv1FkU", R.drawable.img_food01);
 
-        Ingredient[] ingredients02 = new Ingredient[10];
-        ingredients02[0] = new Ingredient("스팸",100f);
-        ingredients02[1] = new Ingredient("달걀",2);
+        ArrayList<Ingredient> ingredients02 = new ArrayList<Ingredient>();;
+        ingredients02.add(new Ingredient("스팸",100f));
+        ingredients02.add(new Ingredient("달걀",2));
         Food food02 = new Food("참치덮밥", ingredients02, "dHwqEo3Ceug", R.drawable.img_food05);
 
-        Ingredient[] ingredients03 = new Ingredient[10];
-        ingredients03[0] = new Ingredient("스팸",100f);
-        ingredients03[1] = new Ingredient("달걀",3);
+        ArrayList<Ingredient> ingredients03 = new ArrayList<Ingredient>();;
+        ingredients03.add(new Ingredient("스팸",100f));
+        ingredients03.add(new Ingredient("달걀",3));
         Food food03 = new Food("김치리조또", ingredients03, "tjcAlTjsAsY", R.drawable.img_food06);
         ///////////////////////////////////////////
 

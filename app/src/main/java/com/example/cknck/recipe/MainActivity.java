@@ -1,5 +1,6 @@
 package com.example.cknck.recipe;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnDel;
     Button btnFindRecipe;
     ArrayAdapter<String> adapter;
+    public ArrayList<Food> foods;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
