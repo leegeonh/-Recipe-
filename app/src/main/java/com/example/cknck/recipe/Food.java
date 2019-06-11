@@ -1,12 +1,17 @@
 package com.example.cknck.recipe;
-import java.net.URL;
+
 import java.util.ArrayList;
 
 public class Food {
 
     String foodName;
+
+    //Ingredient ingredients[];
+    String url;
+    int image;
+    boolean isFavorite;
+
     ArrayList<Ingredient> ingredients;
-    URL url;
 
 
     public String getFoodName() {
@@ -17,10 +22,38 @@ public class Food {
         this.foodName = foodName;
     }
 
-    public Food(String foodName, ArrayList<Ingredient> ingredients, URL url) {
+
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
+    }
+
+    public boolean isFavorite() {
+        return isFavorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        isFavorite = favorite;
+    }
+
+    public Food(String foodName, ArrayList<Ingredient> ingredients, String url, int image) {
         this.foodName = foodName;
         this.ingredients = ingredients;
         this.url = url;
+        this.image = image;
+        this.isFavorite = false;
     }
 
     ArrayList<Ingredient> findMissing(ArrayList<Ingredient> recipeIngredient) {

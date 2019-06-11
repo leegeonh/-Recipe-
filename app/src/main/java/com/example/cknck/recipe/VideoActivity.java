@@ -1,5 +1,6 @@
 package com.example.cknck.recipe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,13 +18,15 @@ public class VideoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
 
+        //RecommandActivity에서 생성한 intent를 활용한다다
+       Intent intent = getIntent();
+
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager( new LinearLayoutManager(this));
 
-
-        String videoCode = "4w9ZsoABaNY";
-        youtubeVideos.add( new YouTubeVideos("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/" + videoCode + "\" frameborder=\"0\" allowfullscreen></iframe>") );
+        youtubeVideos.clear();
+        youtubeVideos.add( new YouTubeVideos(intent.getStringExtra("url")) );
 
         VideoAdapter videoAdapter = new VideoAdapter(youtubeVideos);
 

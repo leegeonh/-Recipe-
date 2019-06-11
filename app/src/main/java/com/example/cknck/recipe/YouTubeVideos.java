@@ -7,7 +7,7 @@ public class YouTubeVideos {
     }
 
     public YouTubeVideos(String videoUrl) {
-        this.videoUrl = videoUrl;
+        this.videoUrl = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/" + videoUrl + "\" frameborder=\"0\" allowfullscreen></iframe>";
     }
 
     public String getVideoUrl() {
@@ -15,6 +15,6 @@ public class YouTubeVideos {
     }
 
     public void setVideoUrl(String videoUrl) {
-        this.videoUrl = videoUrl;
+        this.videoUrl = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/" + videoUrl + "\" frameborder=\"0\" allowfullscreen></iframe>";
     }
 }
