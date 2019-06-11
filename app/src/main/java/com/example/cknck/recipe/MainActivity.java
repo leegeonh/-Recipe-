@@ -1,8 +1,11 @@
 package com.example.cknck.recipe;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -20,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnDel;
     Button btnFindRecipe;
     ArrayAdapter<String> adapter;
+    public ArrayList<Food> foods;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,4 +87,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.actionbar_actions, menu) ;
+
+        return true ;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_favorite :
+                Intent intent = new Intent(this, FavoritesActivity.class);
+                this.startActivity(intent);
+                return true ;
+        }
+        return false;
+    }
+
 }
